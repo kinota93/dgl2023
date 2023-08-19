@@ -2,9 +2,9 @@
 Using enhanced regular expressions as a Data Generation Language. 
 Enhance PCRE by introducing
 - *data types*
-  formatted numbers, 
-  date, time,
-  domain: weekday-name, month-names, ...
+  1. formatted numbers, 
+  1. date, time,
+  1. domains: weekday-name, month-names, ...
 - *random data*
   1. random numbers following some distribution
   1. random data from data types
@@ -21,7 +21,7 @@ Enhance PCRE by introducing
 
 ## PCRE: Perl Compatible Regular Expressions  
 - delimiters /
-  /pattern/
+  - /pattern/
 - meta charactors
   - meta-chars outside square brackets
     \ ^ $ . [ ] | ( ) ? * + { } 
