@@ -4,26 +4,32 @@ Enhance PCRE by introducing
 - *data types*
   - `formatted number` 
   
-  - `date, time`,
-  - `domains`: weekday-name, month-names, ...
+  - `date`,`time`,`year`, `month`, `day`
+  - `enum`: gender, weekday-name, month-name, ...
+  - `set`: colors, 
   
 - *random data*
   
-  1. random numbers following some distribution
-  1. random data from data types
+  random data  from data types, following distribution `$type{start:step:end:dist}$`
+  
+  `$number{1:1}$ 2,3,1,4,...`
+  `$number{1:2}$ 3,1,5,7,...`
+  `$number{4.00:-0.11:0.00}$ 3.89, 3.57, 4.00, 3.78, ...`
+  `$date{'2022-4-1':'7d':'2023-3-31'}$ '2022-4-15','2022-4-1','2022-4-22',...`
+  `$time{'8:00':'1h30m':'21:00'}$ '9:00','12:00','10:30',  ...` 
   
 - *sequential data*
   
-  - sequential data of some type
-    `1,2,3,...`
-    `1,3,5,...`
-    `4.00, 3.89, 3.78, 3.57,...`
-    `'2022-4-1', '2022-4-8', '2022-4-15', ...`
-    `'9:00','10:30', '12:00', ...`
+  sequential data of some type `type(start:step:end)`
+  `$number(1:1)$ 1,2,3,...`
+  `$number(1:2)$ 1,3,5,...`
+  `$number(4.00:-0.11:0.00)$ 4.00, 3.89, 3.78, 3.57,...`
+  `$date('2022-4-1':'7d':'2023-3-31')$ '2022-4-1', '2022-4-8', '2022-4-15', ...`
+  `$time('8:00':'1h30m':'21:00')$ '9:00','10:30', '12:00', ...`
   
 - *variables*
 
-  - `{$a}`
+  - `{:a:}`
 
 - *functions*
 
